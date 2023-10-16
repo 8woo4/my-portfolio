@@ -1,3 +1,4 @@
+import { useNavigation } from 'next/navigation'
 import React from 'react'
 import { FaGithub, FaInstagram } from 'react-icons/fa'
 
@@ -8,8 +9,8 @@ const page = () => {
         <h1>Welcome to My Portfolio</h1>
       </header>
       <div className="section-wrapper">
-        <section className="about-me-section">
-          <strong>
+        <section>
+          <strong class="week-description">
             <h2>About Me</h2>
           </strong>
           <p>
@@ -19,12 +20,12 @@ const page = () => {
         </section>
       </div>
       <div className="section-wrapper">
-        <section className="projects-section">
-          <strong>
+        <section>
+          <strong class="week-description">
             <h2>Projects</h2>
           </strong>
           <ul>
-            <li className="project-item">
+            <li>
               <strong>
                 <h3>쇼핑몰 사이트 제작(F.N.S):</h3>
               </strong>
@@ -52,9 +53,45 @@ const page = () => {
           </ul>
         </section>
       </div>
+      <div className="section-wrapper">
+        <section>
+          <strong>
+            <h2 class="week-description">개인공부</h2>
+          </strong>
+
+          <p class="week-description">1주차</p>
+          <p class="week-description">
+            <a href="https://www.notion.so/1st-8cde5585399641099c9d3971478b4fe9?pvs=4">
+              html 기본 태그, 속성 학습, W3School 예제, 실습코드
+            </a>
+          </p>
+
+          <p class="week-description">2주차</p>
+          <p class="week-description">
+            <a href="https://www.notion.so/2nd-8f854f3417c14154b71e800dc61eba2c?pvs=4">
+              Javascript 태그, 속성 학습. 실습코드 작성
+            </a>
+          </p>
+          <p class="week-description">3주차</p>
+          <p class="week-description">
+            <a href="https://www.notion.so/3rd-1268300a66a840b2a636ff1c90d9d115?pvs=4">
+              CSS 태그, 속성 학습. 실습코드 작성
+            </a>
+          </p>
+          <p class="week-description">4주차</p>
+          <p class="week-description">
+            <a href="https://www.notion.so/4th-7d89a39d050f4cf8a5642050bb11fab6?pvs=4">
+              런타임환경, DB 조사
+            </a>
+          </p>
+          <p class="week-description">추가 예정</p>
+        </section>
+      </div>
       <div></div>
-      <section className="contact-section">
-        <h2>Contact</h2>
+      <section>
+        <strong>
+          <h2>Contact</h2>
+        </strong>
         <p>Email: openup0102@naver.com </p>
         <p>Other Platforms :</p>
         <div>
@@ -62,15 +99,17 @@ const page = () => {
             href="https://github.com/8woo4"
             target="_blank"
             rel="noopener noreferrer"
+            className="icon"
           >
-            <FaGithub className="git" /> GitHub
+            <FaGithub /> GitHub
           </a>
           <a
             href="https://www.instagram.com/8woo4/"
             target="_blank"
             rel="noopener noreferrer"
+            className="icon"
           >
-            <FaInstagram className="git" /> Instagram
+            <FaInstagram /> Instagram
           </a>
         </div>
       </section>
